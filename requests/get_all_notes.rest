@@ -1,1 +1,1 @@
-GET http://localhost:3001/api/notes
+GET https://hidden-island-51476.herokuapp.com/api/notes
