@@ -38,10 +38,10 @@ app.post('/api/notes', (request, response, next) => {
   note.save().then(savedNote => {
     response.json(savedNote)
   })
-  .catch(error => next(error))
+    .catch(error => next(error))
 })
 
-  
+
 app.get('/api/notes', (request, response) => {
   Note.find({}).then(notes => {
     response.json(notes)
@@ -65,7 +65,7 @@ app.get('/api/notes/:id', (request, response, next) => {
       response.status(404).end()
     }
   })
-  .catch(error => next(error))
+    .catch(error => next(error))
 })
 
 app.put('/api/notes/:id', (request, response, next) => {
@@ -102,6 +102,6 @@ const errorHandler = (error, request, response, next) => {
 app.use(errorHandler)
 
 
-const PORT = process.env.PORT 
+const PORT = process.env.PORT
 app.listen(PORT)
 console.log(`Server running on port ${PORT}`)
